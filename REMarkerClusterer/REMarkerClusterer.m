@@ -444,6 +444,8 @@
     [self clusterize:YES];
     if ([self.mapView.selectedAnnotations count] > 0) {
         [self.mapView deselectAnnotation:[self.mapView.selectedAnnotations objectAtIndex:0] animated:NO];
+    } else {
+        [self.mapView deselectAnnotation:nil animated:NO];
     }
     
     if ([_delegate respondsToSelector:@selector(mapView:regionDidChangeAnimated:)])
